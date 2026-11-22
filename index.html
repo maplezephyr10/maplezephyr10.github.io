@@ -1,0 +1,1562 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黑料社区跳转二维码 - 官方品牌门户 | 二维码链接服务与企业级内容生态</title>
+<meta name="description" content="黑料社区跳转二维码官方网站，专注二维码跳转链接服务与企业级内容生态，为创作者与品牌提供高清、正版、专业的跳转二维码与链接管理平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b3202f'/%3E%3Crect x='12' y='12' width='16' height='16' fill='%23fff'/%3E%3Crect x='36' y='12' width='16' height='16' fill='%23fff'/%3E%3Crect x='12' y='36' width='16' height='16' fill='%23fff'/%3E%3Crect x='38' y='38' width='6' height='6' fill='%23fff'/%3E%3Crect x='48' y='38' width='4' height='4' fill='%23fff'/%3E%3Crect x='38' y='48' width='4' height='4' fill='%23fff'/%3E%3Crect x='48' y='48' width='4' height='4' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --hl-red:#b3202f;
+  --hl-red-deep:#8a1522;
+  --hl-ink:#111318;
+  --hl-ink-2:#1b1e25;
+  --hl-paper:#f4f1ec;
+  --hl-paper-2:#e9e4dc;
+  --hl-gray:#5d6069;
+  --hl-line:#d8d2c8;
+  --hl-white:#ffffff;
+  --hl-shadow:0 18px 40px rgba(17,19,24,.14);
+  --hl-radius:14px;
+  --hl-stick:112px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--hl-ink);
+  background:var(--hl-paper);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul,ol{list-style:none}
+section{scroll-margin-top:var(--hl-stick)}
+
+.hl-wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.hl-section{padding:72px 0}
+.hl-section--tight{padding:52px 0}
+
+/* ---------- 公告条 + 页头 吸顶 ---------- */
+.hl-topfix{
+  position:sticky;top:0;z-index:120;
+}
+.hl-notice{
+  background:linear-gradient(90deg,var(--hl-red-deep),var(--hl-red) 55%,#d4303f);
+  color:#fff;
+  font-size:13.5px;
+  letter-spacing:.2px;
+}
+.hl-notice__row{
+  display:flex;align-items:center;gap:14px;
+  padding:9px 0;
+  overflow:hidden;
+}
+.hl-notice__badge{
+  flex:0 0 auto;
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:999px;
+  padding:1px 10px;
+  font-size:12px;
+  font-weight:700;
+}
+.hl-notice__track{
+  flex:1 1 auto;
+  display:flex;gap:36px;
+  white-space:nowrap;
+  overflow:hidden;
+  mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent);
+}
+.hl-notice__track span{animation:hlMarquee 26s linear infinite}
+.hl-notice__track span b{color:#ffe0a8;font-weight:700}
+@keyframes hlMarquee{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-52%)}
+}
+@media (prefers-reduced-motion:reduce){.hl-notice__track span{animation:none}}
+
+.hl-header{
+  background:rgba(244,241,236,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--hl-line);
+}
+.hl-header__row{
+  display:flex;align-items:center;gap:22px;
+  height:68px;
+}
+.hl-brand{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+.hl-brand__mark{
+  width:38px;height:38px;border-radius:10px;
+  background:var(--hl-ink);color:#fff;
+  display:grid;place-items:center;
+  font-weight:800;font-size:15px;letter-spacing:-.5px;
+  box-shadow:inset 0 0 0 2px rgba(179,32,47,.9);
+}
+.hl-brand__name{font-weight:800;font-size:17px;letter-spacing:.3px;line-height:1.15}
+.hl-brand__name em{font-style:normal;color:var(--hl-red)}
+.hl-brand__sub{font-size:10.5px;color:var(--hl-gray);letter-spacing:1.6px}
+.hl-nav{display:flex;align-items:center;gap:4px;margin-left:6px}
+.hl-nav a{
+  font-size:14px;padding:8px 12px;border-radius:8px;color:#33363e;font-weight:600;
+  transition:background .18s,color .18s;
+}
+.hl-nav a:hover{background:var(--hl-paper-2);color:var(--hl-red)}
+.hl-headtools{display:flex;align-items:center;gap:10px;margin-left:auto}
+.hl-search{
+  display:flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--hl-line);border-radius:999px;
+  padding:5px 6px 5px 14px;
+}
+.hl-search input{
+  border:none;outline:none;background:transparent;
+  font-size:13.5px;width:170px;color:var(--hl-ink);
+}
+.hl-search input::placeholder{color:#9a9da6}
+.hl-search button{
+  background:var(--hl-ink);color:#fff;border-radius:999px;
+  padding:6px 15px;font-size:13px;font-weight:700;
+  transition:background .18s;
+}
+.hl-search button:hover{background:var(--hl-red)}
+.hl-burger{
+  display:none;width:40px;height:40px;border-radius:10px;
+  border:1px solid var(--hl-line);background:#fff;
+  align-items:center;justify-content:center;
+}
+.hl-burger span{display:block;width:18px;height:2px;background:var(--hl-ink);position:relative}
+.hl-burger span::before,.hl-burger span::after{
+  content:"";position:absolute;left:0;width:18px;height:2px;background:var(--hl-ink);
+}
+.hl-burger span::before{top:-6px}
+.hl-burger span::after{top:6px}
+.hl-mobile{
+  display:none;border-top:1px solid var(--hl-line);
+  background:rgba(244,241,236,.98);
+}
+.hl-mobile.is-open{display:block}
+.hl-mobile nav{padding:12px 24px 20px;display:flex;flex-direction:column;gap:2px}
+.hl-mobile nav a{padding:11px 6px;border-radius:8px;font-weight:600;font-size:15px;border-bottom:1px dashed var(--hl-line)}
+.hl-mobile nav a:last-child{border-bottom:none}
+
+/* ---------- 按钮 / 通用 ---------- */
+.hl-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border-radius:999px;font-weight:700;font-size:14.5px;
+  padding:11px 24px;transition:transform .16s,box-shadow .16s,background .16s,color .16s;
+  border:1px solid transparent;
+}
+.hl-btn:active{transform:translateY(1px)}
+.hl-btn--primary{background:var(--hl-red);color:#fff;box-shadow:0 10px 24px rgba(179,32,47,.28)}
+.hl-btn--primary:hover{background:var(--hl-red-deep)}
+.hl-btn--dark{background:var(--hl-ink);color:#fff}
+.hl-btn--dark:hover{background:#000}
+.hl-btn--ghost{background:transparent;color:var(--hl-ink);border-color:#b9b3a9}
+.hl-btn--ghost:hover{border-color:var(--hl-ink);background:#fff}
+.hl-btn--sm{padding:7px 15px;font-size:13px;border-radius:8px}
+
+.hl-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:800;letter-spacing:2.4px;color:var(--hl-red);
+  text-transform:uppercase;
+}
+.hl-eyebrow::before{content:"";width:22px;height:2px;background:var(--hl-red)}
+.hl-h2{
+  font-size:clamp(24px,3.4vw,34px);
+  line-height:1.25;letter-spacing:-.4px;font-weight:800;
+  margin:12px 0 14px;
+}
+.hl-h2 em{font-style:normal;color:var(--hl-red)}
+.hl-lead{color:var(--hl-gray);font-size:15.5px;max-width:760px}
+.hl-h3{font-size:18px;font-weight:800;line-height:1.4;letter-spacing:-.2px}
+.hl-meta{font-size:12.5px;color:var(--hl-gray)}
+.hl-tag{
+  display:inline-block;font-size:11.5px;font-weight:700;
+  padding:2px 9px;border-radius:999px;
+  background:rgba(179,32,47,.08);color:var(--hl-red);
+  border:1px solid rgba(179,32,47,.18);
+}
+.hl-tag--ink{background:rgba(17,19,24,.06);color:#3a3d45;border-color:rgba(17,19,24,.12)}
+.hl-rule{height:1px;background:var(--hl-line);border:none}
+
+/* ---------- 首屏 ---------- */
+.hl-hero{
+  background:
+    radial-gradient(900px 380px at 88% -10%,rgba(179,32,47,.10),transparent 62%),
+    linear-gradient(180deg,#f7f4ef,#efeae2);
+  border-bottom:1px solid var(--hl-line);
+  padding:54px 0 64px;
+}
+.hl-hero__grid{
+  display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:center;
+}
+.hl-hero__title{
+  font-size:clamp(32px,5vw,54px);
+  line-height:1.1;font-weight:900;letter-spacing:-1.2px;
+  margin:16px 0 6px;
+}
+.hl-hero__title .hl-dot{color:var(--hl-red)}
+.hl-hero__slogan{
+  font-size:clamp(17px,2vw,21px);font-weight:700;color:#2a2d34;
+  padding-left:14px;border-left:4px solid var(--hl-red);
+  margin:18px 0 16px;line-height:1.55;
+}
+.hl-hero__intro{
+  color:#43464e;font-size:15px;max-width:520px;margin-bottom:22px;
+}
+.hl-hero__intro strong{color:var(--hl-red-deep)}
+.hl-hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.hl-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;border-top:1px solid var(--hl-line);padding-top:20px;max-width:520px;
+}
+.hl-stats__n{font-size:26px;font-weight:900;letter-spacing:-1px;line-height:1.1}
+.hl-stats__n small{font-size:12px;font-weight:700;color:var(--hl-red);margin-left:3px}
+.hl-stats__l{font-size:12px;color:var(--hl-gray);margin-top:2px}
+
+.hl-hero__visual{
+  position:relative;
+  border-radius:20px;overflow:hidden;
+  box-shadow:var(--hl-shadow);
+  background:#16181d;
+}
+.hl-hero__visual img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.hl-hero__caption{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:38px 22px 18px;
+  background:linear-gradient(180deg,transparent,rgba(10,11,14,.86));
+  color:#fff;
+}
+.hl-hero__caption strong{display:block;font-size:16px;letter-spacing:.2px}
+.hl-hero__caption span{font-size:12.5px;opacity:.82}
+.hl-hero__chip{
+  position:absolute;top:16px;left:16px;
+  background:rgba(255,255,255,.94);color:var(--hl-ink);
+  font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px;
+  display:flex;align-items:center;gap:7px;
+}
+.hl-hero__chip i{
+  width:7px;height:7px;border-radius:50%;background:var(--hl-red);
+  display:inline-block;animation:hlPulse 1.6s infinite;
+}
+@keyframes hlPulse{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* ---------- 快速筛选 ---------- */
+.hl-filterbar{
+  display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+  padding:16px 0;border-bottom:1px solid var(--hl-line);
+}
+.hl-filterbar__label{font-size:12.5px;font-weight:800;letter-spacing:1.4px;color:var(--hl-gray);margin-right:6px}
+.hl-chip{
+  font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px;
+  border:1px solid var(--hl-line);background:#fff;color:#3d4048;
+  transition:.16s;
+}
+.hl-chip:hover{border-color:var(--hl-red);color:var(--hl-red)}
+.hl-chip.is-active{background:var(--hl-ink);color:#fff;border-color:var(--hl-ink)}
+.hl-searchfeedback{
+  margin-top:12px;font-size:13.5px;color:var(--hl-red-deep);font-weight:700;
+  min-height:20px;
+}
+
+/* ---------- 焦点 + 视频列表（一幅重点大图 + 文字列表） ---------- */
+.hl-split{display:grid;grid-template-columns:1.15fr 1fr;gap:34px;align-items:start}
+.hl-feature{
+  background:#fff;border:1px solid var(--hl-line);border-radius:var(--hl-radius);
+  overflow:hidden;box-shadow:0 8px 22px rgba(17,19,24,.06);
+  transition:box-shadow .2s,transform .2s;
+}
+.hl-feature:hover{box-shadow:var(--hl-shadow);transform:translateY(-2px)}
+.hl-feature img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.hl-feature__body{padding:20px 22px 22px}
+.hl-feature__title{font-size:20px;font-weight:800;line-height:1.4;margin:8px 0 8px;letter-spacing:-.3px}
+.hl-feature__desc{font-size:14px;color:var(--hl-gray);margin-bottom:14px}
+
+.hl-vlist{display:flex;flex-direction:column;gap:2px}
+.hl-vitem{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:start;
+  padding:16px 4px;border-bottom:1px dashed var(--hl-line);
+}
+.hl-vitem:first-child{padding-top:2px}
+.hl-vitem__title{font-size:15.5px;font-weight:800;line-height:1.45;margin-bottom:4px}
+.hl-vitem__title a:hover{color:var(--hl-red)}
+.hl-vitem__desc{font-size:13px;color:var(--hl-gray);margin-bottom:7px}
+.hl-vitem__tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.hl-vitem__foot{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;color:#7b7e86}
+.hl-vitem__foot b{color:#3a3d45;font-weight:700}
+.hl-vitem__ops{display:flex;flex-direction:column;gap:6px}
+.hl-opbtn{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;font-weight:700;color:#4a4d55;
+  border:1px solid var(--hl-line);background:#fff;border-radius:999px;
+  padding:4px 11px;white-space:nowrap;transition:.16s;
+}
+.hl-opbtn:hover{border-color:var(--hl-red);color:var(--hl-red)}
+.hl-opbtn.is-on{background:rgba(179,32,47,.08);border-color:var(--hl-red);color:var(--hl-red)}
+
+/* ---------- 关键词解析 ---------- */
+.hl-explain{
+  background:#fff;border:1px solid var(--hl-line);border-radius:18px;
+  padding:40px clamp(20px,4vw,52px);
+}
+.hl-explain p{font-size:15px;color:#3b3e46;margin-bottom:14px}
+.hl-explain .hl-h3{margin:26px 0 10px;display:flex;align-items:baseline;gap:10px}
+.hl-explain .hl-h3::before{
+  content:"";width:8px;height:8px;border-radius:50%;background:var(--hl-red);
+  flex:0 0 auto;transform:translateY(-3px);
+}
+.hl-explain blockquote{
+  margin:18px 0;padding:14px 20px;border-left:3px solid var(--hl-red);
+  background:var(--hl-paper);border-radius:0 10px 10px 0;
+  font-size:14.5px;color:#33363e;
+}
+.hl-datastrip{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;
+  background:var(--hl-line);border-radius:12px;overflow:hidden;margin:22px 0 6px;
+}
+.hl-datastrip div{background:#fff;padding:16px 14px}
+.hl-datastrip b{display:block;font-size:20px;font-weight:900;letter-spacing:-.6px;line-height:1.2}
+.hl-datastrip span{font-size:12px;color:var(--hl-gray)}
+
+/* ---------- 专题 ---------- */
+.hl-topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.hl-topic{
+  background:#fff;border:1px solid var(--hl-line);border-radius:var(--hl-radius);
+  padding:22px;display:flex;flex-direction:column;gap:12px;
+  transition:.2s;
+}
+.hl-topic:hover{transform:translateY(-3px);box-shadow:var(--hl-shadow);border-color:#c9c2b6}
+.hl-topic__head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.hl-topic__status{font-size:11px;font-weight:800;letter-spacing:.6px;color:#1f7a4d;background:rgba(31,122,77,.1);padding:2px 9px;border-radius:999px;white-space:nowrap}
+.hl-topic ul{display:flex;flex-direction:column;gap:9px;border-top:1px dashed var(--hl-line);padding-top:12px}
+.hl-topic li{font-size:13.5px;color:#3f424a;display:flex;gap:8px;line-height:1.55}
+.hl-topic li::before{content:"›";color:var(--hl-red);font-weight:800;flex:0 0 auto}
+.hl-topic__cover{border-radius:10px;overflow:hidden}
+.hl-topic__cover img{width:100%;aspect-ratio:16/9;object-fit:cover}
+
+/* ---------- 作者（双列简介） ---------- */
+.hl-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.hl-author{
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;
+  background:#fff;border:1px solid var(--hl-line);border-radius:var(--hl-radius);
+  padding:20px;transition:.2s;
+}
+.hl-author:hover{box-shadow:var(--hl-shadow);transform:translateY(-2px)}
+.hl-avatar{width:64px;height:64px;border-radius:50%;overflow:hidden;flex:0 0 auto}
+.hl-avatar svg{width:100%;height:100%}
+.hl-author__name{font-size:16px;font-weight:800;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.hl-author__field{font-size:12.5px;color:var(--hl-red);font-weight:700;margin:2px 0 6px}
+.hl-author__bio{font-size:13px;color:var(--hl-gray);line-height:1.65}
+.hl-author__nums{display:flex;gap:16px;margin-top:9px;font-size:12px;color:#7b7e86}
+.hl-author__nums b{color:#2c2f36;font-weight:800}
+.hl-linkbtn{
+  font-size:12.5px;font-weight:800;color:var(--hl-red);
+  border-bottom:1px solid rgba(179,32,47,.35);padding-bottom:1px;margin-top:8px;
+  display:inline-block;
+}
+.hl-linkbtn:hover{border-color:var(--hl-red)}
+
+/* ---------- 评价（双列短评） ---------- */
+.hl-reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.hl-review{
+  background:#fff;border:1px solid var(--hl-line);border-left:4px solid var(--hl-red);
+  border-radius:10px;padding:18px 20px;
+}
+.hl-review__top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.hl-review__avatar{
+  width:34px;height:34px;border-radius:50%;background:var(--hl-ink);color:#fff;
+  display:grid;place-items:center;font-size:13px;font-weight:800;flex:0 0 auto;
+}
+.hl-review__who{font-size:13.5px;font-weight:800}
+.hl-review__meta{font-size:11.5px;color:#8a8d95}
+.hl-review p{font-size:13.5px;color:#3d4048}
+.hl-review__stars{color:#d98b20;font-size:12px;letter-spacing:2px;margin-top:8px}
+.hl-score{
+  display:flex;align-items:center;gap:18px;background:var(--hl-ink);color:#fff;
+  border-radius:12px;padding:18px 24px;margin-bottom:22px;flex-wrap:wrap;
+}
+.hl-score b{font-size:38px;letter-spacing:-2px;line-height:1}
+.hl-score span{font-size:13px;opacity:.8;line-height:1.6}
+
+/* ---------- 动态 / 合作 / FAQ ---------- */
+.hl-cols{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:start}
+.hl-news{display:flex;flex-direction:column;gap:2px}
+.hl-news li{
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:baseline;
+  padding:15px 2px;border-bottom:1px dashed var(--hl-line);font-size:14px;
+}
+.hl-news li time{font-size:12px;color:#8a8d95;font-weight:700;letter-spacing:.4px}
+.hl-news li a:hover{color:var(--hl-red)}
+.hl-partners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.hl-partner{
+  border:1px solid var(--hl-line);background:#fff;border-radius:10px;
+  padding:14px;font-size:13.5px;font-weight:800;color:#33363e;
+  display:flex;align-items:center;gap:10px;
+}
+.hl-partner i{
+  width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--hl-red),#e8626f);
+  flex:0 0 auto;
+}
+.hl-faq{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.hl-faq details{
+  background:#fff;border:1px solid var(--hl-line);border-radius:10px;padding:0 18px;
+}
+.hl-faq summary{
+  cursor:pointer;font-weight:800;font-size:14.5px;padding:14px 0;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.hl-faq summary::-webkit-details-marker{display:none}
+.hl-faq summary::after{content:"+";font-size:20px;color:var(--hl-red);font-weight:700;line-height:1}
+.hl-faq details[open] summary::after{content:"–"}
+.hl-faq details p{font-size:13.5px;color:var(--hl-gray);padding:0 0 15px}
+
+/* ---------- 投稿CTA ---------- */
+.hl-cta{
+  background:linear-gradient(120deg,#1a1c22,#2b2f38 55%,#3a2329);
+  color:#fff;border-radius:18px;padding:40px clamp(20px,4vw,48px);
+  display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center;
+}
+.hl-cta h2{font-size:clamp(22px,3vw,30px);line-height:1.3;letter-spacing:-.5px;margin-bottom:10px}
+.hl-cta p{font-size:14px;color:#c9ccd4;max-width:600px}
+.hl-cta__actions{display:flex;flex-direction:column;gap:10px}
+.hl-cta__actions .hl-btn{width:100%}
+
+/* ---------- 页脚 ---------- */
+.hl-footer{background:#0f1116;color:#c4c7cf;padding:56px 0 26px;margin-top:20px}
+.hl-footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px}
+.hl-footer h4{color:#fff;font-size:13px;font-weight:800;letter-spacing:1.4px;margin-bottom:14px}
+.hl-footer a{font-size:13px;color:#b3b6bf;display:block;padding:4px 0}
+.hl-footer a:hover{color:#fff}
+.hl-footer__brand{font-size:17px;font-weight:900;color:#fff;letter-spacing:.4px;margin-bottom:10px}
+.hl-footer__brand em{font-style:normal;color:#e8626f}
+.hl-footer p{font-size:12.5px;color:#8c909a;line-height:1.8}
+.hl-footer__bottom{
+  border-top:1px solid #23262d;margin-top:36px;padding-top:18px;
+  display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;
+  font-size:12px;color:#7c808a;
+}
+
+/* ---------- 弹窗 / Toast / 回顶 ---------- */
+.hl-modal{
+  position:fixed;inset:0;z-index:300;display:none;
+  background:rgba(10,11,14,.55);backdrop-filter:blur(3px);
+  padding:24px;
+  align-items:center;justify-content:center;
+}
+.hl-modal.is-open{display:flex}
+.hl-modal__box{
+  background:#fff;border-radius:16px;max-width:520px;width:100%;
+  padding:26px 26px 22px;box-shadow:0 30px 70px rgba(0,0,0,.35);
+  max-height:86vh;overflow:auto;
+}
+.hl-modal__box h3{font-size:19px;font-weight:900;margin-bottom:6px;letter-spacing:-.3px}
+.hl-modal__box .hl-meta{margin-bottom:16px}
+.hl-field{display:block;margin-bottom:12px;font-size:13px;font-weight:700;color:#3d4048}
+.hl-field input,.hl-field textarea,.hl-field select{
+  width:100%;margin-top:6px;border:1px solid var(--hl-line);border-radius:8px;
+  padding:10px 12px;font-family:inherit;font-size:14px;outline:none;background:#fbfaf8;
+}
+.hl-field input:focus,.hl-field textarea:focus,.hl-field select:focus{border-color:var(--hl-red)}
+.hl-modal__foot{display:flex;justify-content:flex-end;gap:10px;margin-top:16px}
+.hl-sharetip{font-size:13px;color:var(--hl-gray);margin:4px 0 12px}
+.hl-share-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.hl-share-grid button{
+  border:1px solid var(--hl-line);border-radius:10px;padding:12px 6px;
+  font-size:13px;font-weight:800;background:#fbfaf8;
+}
+.hl-share-grid button:hover{border-color:var(--hl-red);color:var(--hl-red)}
+
+.hl-toast{
+  position:fixed;left:50%;bottom:38px;transform:translate(-50%,20px);
+  background:var(--hl-ink);color:#fff;font-size:13.5px;font-weight:700;
+  padding:11px 22px;border-radius:999px;z-index:400;
+  opacity:0;pointer-events:none;transition:.25s;
+  box-shadow:0 14px 30px rgba(0,0,0,.3);
+}
+.hl-toast.is-show{opacity:1;transform:translate(-50%,0)}
+
+.hl-totop{
+  position:fixed;right:22px;bottom:24px;z-index:200;
+  width:44px;height:44px;border-radius:12px;
+  background:var(--hl-ink);color:#fff;font-size:18px;font-weight:800;
+  display:none;align-items:center;justify-content:center;
+  box-shadow:0 12px 26px rgba(0,0,0,.24);
+}
+.hl-totop.is-show{display:flex}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:980px){
+  .hl-hero__grid{grid-template-columns:1fr;gap:30px}
+  .hl-split{grid-template-columns:1fr}
+  .hl-topics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hl-cols{grid-template-columns:1fr}
+  .hl-footer__grid{grid-template-columns:1fr 1fr}
+  .hl-cta{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .hl-nav{display:none}
+  .hl-search input{width:120px}
+  .hl-burger{display:flex}
+  .hl-authors,.hl-reviews{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .hl-section{padding:52px 0}
+  .hl-hero{padding:36px 0 46px}
+  .hl-topics{grid-template-columns:1fr}
+  .hl-stats{grid-template-columns:1fr;gap:10px}
+  .hl-stats__n{font-size:22px}
+  .hl-search{display:none}
+  .hl-datastrip{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hl-footer__grid{grid-template-columns:1fr}
+  .hl-partners{grid-template-columns:1fr}
+  .hl-share-grid{grid-template-columns:1fr 1fr}
+  .hl-author{grid-template-columns:auto minmax(0,1fr)}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ===== 吸顶：公告条 + 页头 ===== -->
+<div class="hl-topfix">
+  <div class="hl-notice" role="region" aria-label="最新公告">
+    <div class="hl-wrap hl-notice__row">
+      <span class="hl-notice__badge">官方发布</span>
+      <div class="hl-notice__track">
+        <span>
+          <b>11-22</b> 跳转二维码批量生成器 v3.2 上线，支持自定义落地页与访问统计 ·
+          <b>11-20</b> 内容生态社区「创作者名录」新增 38 位签约作者 ·
+          <b>11-18</b> 品牌故事企划《扫码之后》第二季开播 ·
+          <b>11-15</b> 内容安全与链接合规白皮书（2026 版）开放下载 ·
+          <b>11-12</b> 冬季创意挑战赛报名通道开启，投稿截止 12 月 20 日
+        </span>
+        <span aria-hidden="true">
+          <b>11-22</b> 跳转二维码批量生成器 v3.2 上线，支持自定义落地页与访问统计 ·
+          <b>11-20</b> 内容生态社区「创作者名录」新增 38 位签约作者 ·
+          <b>11-18</b> 品牌故事企划《扫码之后》第二季开播 ·
+          <b>11-15</b> 内容安全与链接合规白皮书（2026 版）开放下载 ·
+          <b>11-12</b> 冬季创意挑战赛报名通道开启，投稿截止 12 月 20 日
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <header class="hl-header">
+    <div class="hl-wrap hl-header__row">
+      <a class="hl-brand" href="#hl-top" aria-label="黑料社区跳转二维码 官方网站首页">
+        <span class="hl-brand__mark">HL</span>
+        <span>
+          <span class="hl-brand__name">黑料社区<em>跳转二维码</em></span>
+          <span class="hl-brand__sub">官方网站 · OFFICIAL</span>
+        </span>
+      </a>
+      <nav class="hl-nav" aria-label="主导航">
+        <a href="#hl-focus">焦点内容</a>
+        <a href="#hl-explain">品牌解析</a>
+        <a href="#hl-topics">专题企划</a>
+        <a href="#hl-creators">创作者</a>
+        <a href="#hl-voices">口碑</a>
+        <a href="#hl-news">企业动态</a>
+        <a href="#hl-faq">帮助</a>
+      </nav>
+      <div class="hl-headtools">
+        <form class="hl-search" id="hlSearchForm" role="search" onsubmit="return false;">
+          <input id="hlSearchInput" type="search" placeholder="搜索二维码攻略、专题、作者" aria-label="站内搜索">
+          <button type="submit" id="hlSearchBtn">搜索</button>
+        </form>
+        <button class="hl-burger" id="hlBurger" aria-label="展开导航" aria-expanded="false" aria-controls="hlMobileNav">
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <div class="hl-mobile" id="hlMobileNav">
+      <nav aria-label="移动端导航">
+        <a href="#hl-focus">焦点内容</a>
+        <a href="#hl-explain">品牌解析</a>
+        <a href="#hl-topics">专题企划</a>
+        <a href="#hl-creators">创作者</a>
+        <a href="#hl-voices">口碑评价</a>
+        <a href="#hl-news">企业动态</a>
+        <a href="#hl-faq">常见问题</a>
+        <a href="#hl-submit">投稿与联系</a>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<main id="hl-top">
+
+  <!-- ===== 首屏：左文右侧大图 + 数据条 ===== -->
+  <section class="hl-hero" aria-labelledby="hl-hero-title">
+    <div class="hl-wrap hl-hero__grid">
+      <div>
+        <span class="hl-eyebrow">企业级跳转链接平台</span>
+        <h1 class="hl-hero__title" id="hl-hero-title">黑料社区跳转二维码<span class="hl-dot">。</span></h1>
+        <p class="hl-hero__slogan">一个码，连接内容、创作者与品牌 —— 二维码跳转的官方入口。</p>
+        <p class="hl-hero__intro">
+          作为<strong>黑料社区跳转二维码</strong>官方网站，我们深耕二维码跳转链接与内容分发这一垂直领域，
+          为创作者、企业与社区用户提供<strong>高清、正版、专业</strong>的链接管理与内容生态服务。
+          从单条链接生成、批量二维码投放，到访问数据回传与内容安全审核，平台以用户至上的标准持续运营。
+        </p>
+        <div class="hl-hero__actions">
+          <button class="hl-btn hl-btn--primary" data-hl-modal="submit">立即投稿 / 报名挑战</button>
+          <a class="hl-btn hl-btn--ghost" href="#hl-explain">了解品牌与平台</a>
+          <a class="hl-btn hl-btn--dark" href="#hl-focus">浏览精品内容</a>
+        </div>
+        <div class="hl-stats">
+          <div>
+            <div class="hl-stats__n" data-hl-count="1284">0<small>万+</small></div>
+            <div class="hl-stats__l">累计生成跳转二维码</div>
+          </div>
+          <div>
+            <div class="hl-stats__n" data-hl-count="326">0<small>位</small></div>
+            <div class="hl-stats__l">签约与入驻创作者</div>
+          </div>
+          <div>
+            <div class="hl-stats__n" data-hl-count="97">0<small>.4%</small></div>
+            <div class="hl-stats__l">用户满意度口碑值</div>
+          </div>
+        </div>
+      </div>
+      <figure class="hl-hero__visual">
+        <span class="hl-hero__chip"><i></i>官方主视觉 · 扫码可跳转</span>
+        <img alt="黑料社区跳转二维码官方主视觉：手机扫描二维码后跳转至内容聚合页" width="880" height="605"
+          src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 880 605'%3E%3Cdefs%3E%3ClinearGradient id='bgA' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23191c22'/%3E%3Cstop offset='1' stop-color='%2334242a'/%3E%3C/linearGradient%3E%3ClinearGradient id='beam' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e8626f' stop-opacity='.9'/%3E%3Cstop offset='1' stop-color='%23b3202f' stop-opacity='.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='880' height='605' fill='url(%23bgA)'/%3E%3Ccircle cx='700' cy='120' r='190' fill='url(%23beam)' opacity='.35'/%3E%3Cg stroke='%23ffffff' stroke-opacity='.07'%3E%3Cpath d='M0 150h880M0 300h880M0 450h880M220 0v605M440 0v605M660 0v605'/%3E%3C/g%3E%3Cg transform='translate(112 108)'%3E%3Crect width='250' height='390' rx='30' fill='%23f4f1ec'/%3E%3Crect x='14' y='34' width='222' height='322' rx='10' fill='%23202429'/%3E%3Crect x='95' y='16' width='60' height='8' rx='4' fill='%23b3202f'/%3E%3Cg fill='%23ffffff'%3E%3Crect x='38' y='60' width='34' height='34' rx='4'/%3E%3Crect x='178' y='60' width='34' height='34' rx='4'/%3E%3Crect x='38' y='200' width='34' height='34' rx='4'/%3E%3C/g%3E%3Cg fill='%23f4f1ec'%3E%3Crect x='48' y='70' width='14' height='14'/%3E%3Crect x='188' y='70' width='14' height='14'/%3E%3Crect x='48' y='210' width='14' height='14'/%3E%3C/g%3E%3Cg fill='%23e8626f'%3E%3Crect x='96' y='120' width='16' height='16'/%3E%3Crect x='128' y='120' width='16' height='16'/%3E%3Crect x='160' y='152' width='16' height='16'/%3E%3Crect x='96' y='184' width='16' height='16'/%3E%3Crect x='160' y='216' width='16' height='16'/%3E%3Crect x='128' y='248' width='16' height='16'/%3E%3Crect x='96' y='280' width='16' height='16'/%3E%3Crect x='176' y='280' width='16' height='16'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.85'%3E%3Crect x='160' y='120' width='16' height='16'/%3E%3Crect x='96' y='152' width='16' height='16'/%3E%3Crect x='128' y='184' width='16' height='16'/%3E%3Crect x='192' y='184' width='16' height='16'/%3E%3Crect x='128' y='216' width='16' height='16'/%3E%3Crect x='96' y='248' width='16' height='16'/%3E%3Crect x='176' y='248' width='16' height='16'/%3E%3C/g%3E%3Crect x='14' y='292' width='222' height='64' rx='8' fill='%23b3202f' opacity='.16'/%3E%3Ctext x='125' y='330' text-anchor='middle' font-family='sans-serif' font-size='17' fill='%23ffffff' font-weight='bold'%3E扫 码 跳 转%3C/text%3E%3C/g%3E%3Cg font-family='sans-serif' fill='%23ffffff'%3E%3Ctext x='430' y='190' font-size='40' font-weight='bold'%3E跳转二维码%3C/text%3E%3Ctext x='430' y='238' font-size='19' fill='%23c9ccd4'%3E链接管理 · 内容分发 · 访问统计%3C/text%3E%3C/g%3E%3Cg%3E%3Crect x='430' y='278' width='330' height='1' fill='%23ffffff' opacity='.18'/%3E%3Crect x='430' y='306' width='210' height='9' rx='4' fill='%23e8626f' opacity='.8'/%3E%3Crect x='430' y='330' width='290' height='9' rx='4' fill='%23ffffff' opacity='.28'/%3E%3Crect x='430' y='354' width='170' height='9' rx='4' fill='%23ffffff' opacity='.18'/%3E%3C/g%3E%3Cg transform='translate(430 400)'%3E%3Crect width='120' height='70' rx='10' fill='%23ffffff' opacity='.07'/%3E%3Crect x='150' width='120' height='70' rx='10' fill='%23ffffff' opacity='.07'/%3E%3Crect x='300' width='120' height='70' rx='10' fill='%23ffffff' opacity='.07'/%3E%3Ctext x='16' y='30' font-family='sans-serif' font-size='13' fill='%23c9ccd4'%3E生成量%3C/text%3E%3Ctext x='16' y='56' font-family='sans-serif' font-size='20' fill='%23ffffff' font-weight='bold'%3E1284万%3C/text%3E%3Ctext x='166' y='30' font-family='sans-serif' font-size='13' fill='%23c9ccd4'%3E创作者%3C/text%3E%3Ctext x='166' y='56' font-family='sans-serif' font-size='20' fill='%23ffffff' font-weight='bold'%3E326位%3C/text%3E%3Ctext x='316' y='30' font-family='sans-serif' font-size='13' fill='%23c9ccd4'%3E合规率%3C/text%3E%3Ctext x='316' y='56' font-family='sans-serif' font-size='20' fill='%23ffffff' font-weight='bold'%3E99.2%25%3C/text%3E%3C/g%3E%3C/svg%3E">
+        <figcaption class="hl-hero__caption">
+          <strong>官方跳转主视觉 · 扫码之后的一切</strong>
+          <span>从一张码到一条内容线：跳转、留痕、复盘，全部在平台内完成。</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== 快速筛选 + 搜索反馈 ===== -->
+  <div class="hl-wrap">
+    <div class="hl-filterbar" id="hlFilterBar" role="group" aria-label="内容标签筛选">
+      <span class="hl-filterbar__label">标签筛选</span>
+      <button class="hl-chip is-active" data-hl-tag="全部">全部</button>
+      <button class="hl-chip" data-hl-tag="二维码">二维码</button>
+      <button class="hl-chip" data-hl-tag="攻略">攻略</button>
+      <button class="hl-chip" data-hl-tag="测评">测评</button>
+      <button class="hl-chip" data-hl-tag="创作幕后">创作幕后</button>
+      <button class="hl-chip" data-hl-tag="品牌故事">品牌故事</button>
+      <button class="hl-chip" data-hl-tag="合规">合规</button>
+    </div>
+    <div class="hl-searchfeedback" id="hlSearchFeedback" aria-live="polite"></div>
+  </div>
+
+  <!-- ===== 焦点内容 + 视频文字列表 ===== -->
+  <section class="hl-section" id="hl-focus" aria-labelledby="hl-focus-h2">
+    <div class="hl-wrap">
+      <span class="hl-eyebrow">焦点推荐</span>
+      <h2 class="hl-h2" id="hl-focus-h2">本周焦点：<em>一张跳转二维码</em>如何走完内容链路</h2>
+      <p class="hl-lead">平台围绕跳转二维码这一垂直领域持续运营精品内容，把「怎么生成、投放到哪里、数据如何回看」拆成可直接照做的步骤。</p>
+
+      <div class="hl-split" style="margin-top:28px;">
+        <!-- 一幅重点大图 -->
+        <article class="hl-feature" data-hl-tag="二维码">
+          <img alt="跳转二维码生成界面与落地页数据看板示意图" width="720" height="405"
+            src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 405'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23eef1f6'/%3E%3Cstop offset='1' stop-color='%23d8dee8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='720' height='405' fill='url(%23g1)'/%3E%3Crect x='42' y='42' width='300' height='321' rx='12' fill='%23ffffff' stroke='%23c3cad6'/%3E%3Crect x='64' y='66' width='92' height='10' rx='5' fill='%23111318'/%3E%3Crect x='64' y='88' width='154' height='8' rx='4' fill='%23c3cad6'/%3E%3Cg transform='translate(64 120)' fill='%23111318'%3E%3Crect width='46' height='46'/%3E%3Crect x='76' width='46' height='46'/%3E%3Crect width='46' height='46' y='76'/%3E%3Crect x='76' y='76' width='18' height='18'/%3E%3Crect x='104' y='76' width='18' height='18'/%3E%3Crect x='76' y='104' width='18' height='18'/%3E%3C/g%3E%3Cg fill='%23b3202f'%3E%3Crect x='64' y='232' width='18' height='18'/%3E%3Crect x='92' y='232' width='18' height='18'/%3E%3Crect x='120' y='260' width='18' height='18'/%3E%3Crect x='64' y='288' width='18' height='18'/%3E%3C/g%3E%3Crect x='380' y='42' width='298' height='321' rx='12' fill='%23ffffff' stroke='%23c3cad6'/%3E%3Crect x='402' y='66' width='112' height='10' rx='5' fill='%23111318'/%3E%3Cg transform='translate(402 96)'%3E%3Crect width='254' height='1' fill='%23e2e7ef'/%3E%3Crect y='40' width='254' height='1' fill='%23e2e7ef'/%3E%3Crect y='80' width='254' height='1' fill='%23e2e7ef'/%3E%3C/g%3E%3Cg fill='%23b3202f'%3E%3Crect x='402' y='252' width='30' height='60' rx='4'/%3E%3Crect x='444' y='224' width='30' height='88' rx='4'/%3E%3Crect x='486' y='196' width='30' height='116' rx='4'/%3E%3Crect x='528' y='236' width='30' height='76' rx='4'/%3E%3Crect x='570' y='168' width='30' height='144' rx='4'/%3E%3Crect x='612' y='208' width='30' height='104' rx='4'/%3E%3C/g%3E%3Crect x='402' y='120' width='126' height='8' rx='4' fill='%23c3cad6'/%3E%3Crect x='402' y='138' width='196' height='8' rx='4' fill='%23e2e7ef'/%3E%3C/svg%3E">
+          <div class="hl-feature__body">
+            <div class="hl-vitem__tags">
+              <span class="hl-tag">二维码</span>
+              <span class="hl-tag hl-tag--ink">教程干货</span>
+              <span class="hl-tag hl-tag--ink">数据回看</span>
+            </div>
+            <h3 class="hl-feature__title">从零到上线：跳转二维码的 7 个配置细节</h3>
+            <p class="hl-feature__desc">
+              落地页参数、短链前缀、可见文案、停留时长阈值、防刷策略、统计维度与分享回退页——
+              这七个细节决定了你的二维码是「能扫」还是「好用」。本期把官方后台的真实配置路径完整走了一遍，
+              并附上三条常见的失败排查清单。
+            </p>
+            <div class="hl-vitem__foot" style="margin-bottom:14px;">
+              <span>作者 <b>程野</b></span>
+              <span>播放 <b>42.8 万</b></span>
+              <span>点赞 <b>1.9 万</b></span>
+              <span>收藏 <b>8600</b></span>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <button class="hl-opbtn" data-hl-like>♡ 点赞 <b>0</b></button>
+              <button class="hl-opbtn" data-hl-fav>☆ 收藏</button>
+              <button class="hl-opbtn" data-hl-copy>复制链接</button>
+              <button class="hl-opbtn" data-hl-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 文字列表 -->
+        <div class="hl-vlist" id="hlFocusList">
+          <article class="hl-vitem" data-hl-tag="攻略">
+            <div>
+              <h3 class="hl-vitem__title"><a href="#hl-explain">跳转二维码投放攻略：线下点位与线上渠道的节点表</a></h3>
+              <p class="hl-vitem__desc">把点位分成「高频低停留」和「低频高停留」两类，二维码的文案与落地页节奏完全不同。</p>
+              <div class="hl-vitem__tags"><span class="hl-tag">攻略</span><span class="hl-tag hl-tag--ink">线下投放</span></div>
+              <div class="hl-vitem__foot"><span>作者 <b>林向阳</b></span><span>播放 <b>18.2 万</b></span><span>点赞 <b>7340</b></span><span>收藏 <b>3120</b></span></div>
+            </div>
+            <div class="hl-vitem__ops">
+              <button class="hl-opbtn" data-hl-like>♡ <b>0</b></button>
+              <button class="hl-opbtn" data-hl-fav>☆</button>
+            </div>
+          </article>
+
+          <article class="hl-vitem" data-hl-tag="测评">
+            <div>
+              <h3 class="hl-vitem__title"><a href="#hl-explain">六款跳转二维码工具横向测评：谁的回传数据更干净</a></h3>
+              <p class="hl-vitem__desc">统一用同一条内容链接做测试，对比生成速度、扫描识别率、统计口径与导出结构。</p>
+              <div class="hl-vitem__tags"><span class="hl-tag">测评</span><span class="hl-tag hl-tag--ink">行业观察</span></div>
+              <div class="hl-vitem__foot"><span>作者 <b>苏慢</b></span><span>播放 <b>26.5 万</b></span><span>点赞 <b>1.1 万</b></span><span>收藏 <b>6040</b></span></div>
+            </div>
+            <div class="hl-vitem__ops">
+              <button class="hl-opbtn" data-hl-like>♡ <b>0</b></button>
+              <button class="hl-opbtn" data-hl-fav>☆</button>
+            </div>
+          </article>
+
+          <article class="hl-vitem" data-hl-tag="创作幕后">
+            <div>
+              <h3 class="hl-vitem__title"><a href="#hl-topics">一条品牌宣传片，为什么要在片尾放两张不同的码</a></h3>
+              <p class="hl-vitem__desc">幕后拆解：第一张码给「看完的人」，第二张码给「中途想了解的人」，转化路径不同。</p>
+              <div class="hl-vitem__tags"><span class="hl-tag">创作幕后</span><span class="hl-tag hl-tag--ink">品牌故事</span></div>
+              <div class="hl-vitem__foot"><span>作者 <b>陆见微</b></span><span>播放 <b>13.7 万</b></span><span>点赞 <b>5210</b></span><span>收藏 <b>2480</b></span></div>
+            </div>
+            <div class="hl-vitem__ops">
+              <button class="hl-opbtn" data-hl-like>♡ <b>0</b></button>
+              <button class="hl-opbtn" data-hl-fav>☆</button>
+            </div>
+          </article>
+
+          <article class="hl-vitem" data-hl-tag="合规">
+            <div>
+              <h3 class="hl-vitem__title"><a href="#hl-faq">跳转链接的合规清单：哪些落地页会被平台拦截</a></h3>
+              <p class="hl-vitem__desc">把内容安全审核拆成四个可执行的检查点，前三个决定能不能过，第四个决定过得好不好。</p>
+              <div class="hl-vitem__tags"><span class="hl-tag">合规</span><span class="hl-tag hl-tag--ink">实用技巧</span></div>
+              <div class="hl-vitem__foot"><span>作者 <b>何知白</b></span><span>播放 <b>9.6 万</b></span><span>点赞 <b>4320</b></span><span>收藏 <b>3910</b></span></div>
+            </div>
+            <div class="hl-vitem__ops">
+              <button class="hl-opbtn" data-hl-like>♡ <b>0</b></button>
+              <button class="hl-opbtn" data-hl-fav>☆</button>
+            </div>
+          </article>
+
+          <article class="hl-vitem" data-hl-tag="品牌故事">
+            <div>
+              <h3 class="hl-vitem__title"><a href="#hl-news">四年只做一件事：把跳转这件事做扎实</a></h3>
+              <p class="hl-vitem__desc">从最早的十几人小组到如今的平台团队，一次关于「慢」与「稳」的品牌故事回顾。</p>
+              <div class="hl-vitem__tags"><span class="hl-tag">品牌故事</span><span class="hl-tag hl-tag--ink">企业动态</span></div>
+              <div class="hl-vitem__foot"><span>作者 <b>品牌编辑部</b></span><span>播放 <b>7.4 万</b></span><span>点赞 <b>3860</b></span><span>收藏 <b>1520</b></span></div>
+            </div>
+            <div class="hl-vitem__ops">
+              <button class="hl-opbtn" data-hl-like>♡ <b>0</b></button>
+              <button class="hl-opbtn" data-hl-fav>☆</button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <p class="hl-searchfeedback" id="hlFilterFeedback" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ===== 关键词解析（800字以上） ===== -->
+  <section class="hl-section hl-section--tight" id="hl-explain" aria-labelledby="hl-explain-h2">
+    <div class="hl-wrap">
+      <div class="hl-explain">
+        <span class="hl-eyebrow">品牌深度解析</span>
+        <h2 class="hl-h2" id="hl-explain-h2">读懂<em>黑料社区跳转二维码</em>：一个垂直领域的完整生态</h2>
+        <p>
+          很多人第一次听到「黑料社区跳转二维码」这串词，会以为它只是某一条链接的别名。事实上，
+          在<strong>黑料社区跳转二维码</strong>官方网站的定义里，它指的是一整套围绕二维码跳转展开的
+          <strong>内容生态</strong>：创作者把内容做成可被扫描的入口，用户通过一次扫码抵达真实的信息页面，
+          品牌则在后台看到一条条可被复盘的行为链路。三者被同一套规则连接，这才构成了「社区」二字的分量。
+          我们把这个平台定位为垂直领域的<strong>官方网站</strong>与内容服务方，而不是一个单纯的工具页。
+        </p>
+
+        <h3 class="hl-h3">一、它解决的到底是什么问题</h3>
+        <p>
+          二维码是物理世界与数字内容之间最轻的一层接口。一层贴纸、一张海报、一份包装、一块屏幕，
+          只要印上一枚码，就带着一条能被随时更新的内容出口。但「轻」往往意味着「乱」：
+          码的管理分散在各个账号里，链接过期没人知道，落地页被篡改无人察觉，数据回收依赖手工整理。
+          <strong>黑料社区跳转二维码</strong>平台成立之初，就把这三个痛点拆成了三条产品线——
+          链接与码的统一管理、落地页的实时校验、访问数据的自动回传。我们不做花哨的功能堆叠，
+          而是让一条码从生成到失效的每一步都留下可查的记录。这是我们认为「值得信赖」最具体的含义。
+        </p>
+
+        <h3 class="hl-h3">二、内容生态是怎么运转的</h3>
+        <p>
+          平台上的内容分为三条清晰的流向。第一条是<strong>创作者内容</strong>：攻略、测评、幕后、访谈，
+          由签约作者与社区用户上传，经过审核后进入内容池，部分优质作品会被推荐到焦点位。
+          第二条是<strong>企业内容</strong>：品牌宣传、活动报名、产品说明，通过官方发布渠道进入，
+          统一使用平台的跳转二维码作为落地入口。第三条是<strong>社区互动</strong>：点赞、收藏、评论、投稿，
+          这些行为数据不影响内容排序的唯一权重，但会被用于判断内容是否需要二次分发。
+          三条流向共用一套内容标准，也共用同一批审核与运营人员，因此<strong>黑料社区跳转二维码</strong>
+          的内容生态在节奏上是统一的：不追求单日的爆发，追求持续运营下的稳定输出。
+        </p>
+        <blockquote>
+          「我们更在意一条码在三个月之后还能不能扫、扫出来的还是不是那条内容。」
+          —— 摘自平台内部的内容运营手册，也是我们对外承诺的一条底线。
+        </blockquote>
+        <div class="hl-datastrip">
+          <div><b>4 年</b><span>持续运营周期</span></div>
+          <div><b>326 位</b><span>入驻创作者</span></div>
+          <div><b>99.2%</b><span>链接合规通过率</span></div>
+          <div><b>1.2 亿次</b><span>累计扫码跳转</span></div>
+        </div>
+
+        <h3 class="hl-h3">三、为什么强调「官方」与「正版」</h3>
+        <p>
+          二维码的中间层天然带有信息差：用户看到一个码，不知道它会把手机带去哪里。这个信息差是行业里
+          最容易被动用的地方，也是我们最在意的地方。因此<strong>黑料社区跳转二维码</strong>把「可验证」
+          做成平台的第一原则：每一条由官方渠道生成的跳转码都带有版本标识，落地页经过内容安全审核，
+          变更记录对内容方可见；用户如果遇到异常页面，可以在任意页面右下角的反馈入口提交线索，
+          运营团队会在 24 小时内响应。我们不承诺世界上没有坏链接，我们承诺的是——平台里的链接，
+          每一条都有出处、有归属、有负责人。这也是「官方网站」这四个字应该承担的责任。
+        </p>
+
+        <h3 class="hl-h3">四、平台适合谁，以及它不适合谁</h3>
+        <p>
+          平台适合三类人。第一类是内容创作者，尤其是习惯用图文和短内容表达的人，他们需要一个稳定的
+          内容落地入口，而不是一条三天就会失效的链接。第二类是中小品牌与线下门店，他们需要在海报、
+          包装、物料上反复使用同一批码，并且希望随时能改目的地而不必重新印刷。第三类是社区里的普通用户，
+          他们来平台是为了找到可信的攻略、真实的测评与有细节的幕后故事。平台不适合的，是希望通过跳转码
+          绕过内容审核、把用户引向违规页面的行为——这类链接一旦被识别，会被平台直接拦截并留档。
+          我们把这套规则写在白皮书里，也写进每一次内容审核的判断标准里。做<strong>用户首选</strong>的平台，
+          靠的不是功能数量，而是边界清晰。我们希望<strong>黑料社区跳转二维码</strong>这个名字，
+          在用户心里对应的是一种可以放心扫码的确定性。
+        </p>
+        <p>
+          从更长的时间看，平台还在做三件慢事：一是把过往四年的跳转数据做成公开的行业观察报告，
+          让更多内容方理解扫码行为的真实分布；二是与创作者共建内容标准，让「什么算好的跳转落地页」
+          有一份可讨论的样本；三是持续压缩审核响应时间，把内容安全的处理从「事后」前移到「事前」。
+          这些事不会带来短期的流量爆发，但它们是<strong>黑料社区跳转二维码</strong>能够长期存在的理由，
+          也是我们理解「平台」二字的方式。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 专题企划 ===== -->
+  <section class="hl-section hl-section--tight" id="hl-topics" aria-labelledby="hl-topics-h2">
+    <div class="hl-wrap">
+      <span class="hl-eyebrow">专题与企划</span>
+      <h2 class="hl-h2" id="hl-topics-h2">三个进行中的<em>专题企划</em>，把跳转讲透</h2>
+      <p class="hl-lead">每个专题由平台编辑部与创作者共同策划，内容按周更新，更新状态实时同步。</p>
+      <div class="hl-topics" style="margin-top:26px;">
+
+        <article class="hl-topic" data-hl-tag="品牌故事">
+          <div class="hl-topic__cover">
+            <img alt="专题《扫码之后》品牌故事企划封面：二维码与内容入口的连线插画" width="480" height="270"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f2e9dd'/%3E%3Ccircle cx='240' cy='135' r='96' fill='%23b3202f' opacity='.12'/%3E%3Cg stroke='%23b3202f' stroke-width='2' fill='none'%3E%3Crect x='186' y='81' width='108' height='108' rx='8'/%3E%3Cpath d='M186 135h108M240 81v108' opacity='.35'/%3E%3C/g%3E%3Cg fill='%23111318'%3E%3Crect x='202' y='97' width='24' height='24'/%3E%3Crect x='254' y='97' width='24' height='24'/%3E%3Crect x='202' y='149' width='24' height='24'/%3E%3C/g%3E%3Cg fill='%23b3202f'%3E%3Ccircle cx='360' cy='70' r='7'/%3E%3Ccircle cx='120' cy='200' r='5'/%3E%3Ccircle cx='396' cy='204' r='4'/%3E%3C/g%3E%3Cpath d='M282 135h66M132 135h54' stroke='%23b3202f' stroke-width='2' stroke-dasharray='5 5'/%3E%3C/svg%3E">
+          </div>
+          <div class="hl-topic__head">
+            <h3 class="hl-h3">《扫码之后》第二季</h3>
+            <span class="hl-topic__status">更新中 · 第 6 期</span>
+          </div>
+          <p class="hl-meta">一档记录真实扫码故事的影像企划，聚焦内容与人的相遇瞬间。</p>
+          <ul>
+            <li>第 6 期：一张贴在老街面馆门口的码，带来了一年 4 万次访问</li>
+            <li>第 5 期：独立书店如何用一张码做读书会报名</li>
+            <li>第 4 期：手工工作室的原料溯源二维码实验</li>
+          </ul>
+        </article>
+
+        <article class="hl-topic" data-hl-tag="攻略">
+          <div class="hl-topic__head">
+            <h3 class="hl-h3">跳转二维码实用攻略集</h3>
+            <span class="hl-topic__status">已完结 · 12 篇</span>
+          </div>
+          <p class="hl-meta">从注册到批量投放，一套可以直接照做的操作手册，附失败排查表。</p>
+          <ul>
+            <li>攻略一：新账号的五个初始化设置，先做对再生成</li>
+            <li>攻略七：批量生成时的命名规范与目录结构</li>
+            <li>攻略十二：投放后 72 小时该看的四个数据</li>
+          </ul>
+          <div class="hl-topic__cover" style="margin-top:auto;">
+            <img alt="攻略集专题封面：二维码配置步骤与清单卡片插画" width="480" height="270"
+              src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23e8edf3'/%3E%3Crect x='48' y='42' width='176' height='186' rx='10' fill='%23ffffff' stroke='%23c3ccd8'/%3E%3Crect x='70' y='68' width='96' height='10' rx='5' fill='%23111318'/%3E%3Cg fill='%23c3ccd8'%3E%3Crect x='70' y='96' width='132' height='8' rx='4'/%3E%3Crect x='70' y='116' width='112' height='8' rx='4'/%3E%3Crect x='70' y='136' width='132' height='8' rx='4'/%3E%3Crect x='70' y='156' width='88' height='8' rx='4'/%3E%3C/g%3E%3Crect x='70' y='184' width='72' height='26' rx='13' fill='%23b3202f'/%3E%3Cg transform='translate(272 58)'%3E%3Crect width='152' height='152' rx='10' fill='%23111318'/%3E%3Cg fill='%23ffffff'%3E%3Crect x='16' y='16' width='30' height='30'/%3E%3Crect x='106' y='16' width='30' height='30'/%3E%3Crect x='16' y='106' width='30' height='30'/%3E%3C/g%3E%3Cg fill='%23e8626f'%3E%3Crect x='62' y='62' width='16' height='16'/%3E%3Crect x='92' y='62' width='16' height='16'/%3E%3Crect x='62' y='92' width='16' height='16'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E">
+          </div>
+        </article>
+
+        <article class="hl-topic" data-hl-tag="测评">
+          <div class="hl-topic__head">
+            <h3 class="hl-h3">工具测评实验室</h3>
+            <span class="hl-topic__status">更新中 · 每月一期</span>
+          </div>
+          <p class="hl-meta">同一套测试方法，横向比较行业内的跳转与码管理工具。</p>
+          <ul>
+            <li>月度榜：本月扫描识别率与数据回传完整度对比</li>
+            <li>深测：统计口径差异会如何影响你的复盘结论</li>
+            <li>读者提问：动态码与静态码到底该怎么选</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 创作者矩阵（双列简介） ===== -->
+  <section class="hl-section" id="hl-creators" aria-labelledby="hl-creators-h2">
+    <div class="hl-wrap">
+      <span class="hl-eyebrow">创作者矩阵</span>
+      <h2 class="hl-h2" id="hl-creators-h2">六位签约创作者，构成<em>黑料社区跳转二维码</em>的内容底色</h2>
+      <p class="hl-lead">他们的领域各不相同，但都在用同一种方式工作：把一件小事做细，再讲清楚。</p>
+
+      <div class="hl-authors" style="margin-top:26px;">
+
+        <article class="hl-author">
+          <div class="hl-avatar">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#b3202f"/><text x="32" y="41" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#fff">程</text></svg>
+          </div>
+          <div>
+            <h3 class="hl-author__name">程野 <span class="hl-tag">资深评测</span></h3>
+            <div class="hl-author__field">擅长：跳转配置拆解 · 工具横向测评</div>
+            <p class="hl-author__bio">
+              做了七年产品测评，习惯把功能表拆成「能不能用」和「好不好用」两栏。
+              在平台上主理焦点内容与工具测评实验室，喜欢用一张对比表代替通篇形容词，
+              也愿意在评论区回答最基础的问题。他的视频里几乎没有快剪，只有一步步的操作截图。
+            </p>
+            <div class="hl-author__nums"><span>作品 <b>86</b></span><span>粉丝 <b>12.4 万</b></span></div>
+            <button class="hl-linkbtn" data-hl-author="程野">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="hl-author">
+          <div class="hl-avatar">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="#1a1c22"/><circle cx="32" cy="26" r="11" fill="#e8edf3"/><path d="M12 58a20 20 0 0140 0" fill="#e8edf3"/></svg>
+          </div>
+          <div>
+            <h3 class="hl-author__name">林向阳 <span class="hl-tag hl-tag--ink">线下投放</span></h3>
+            <div class="hl-author__field">擅长：线下点位 · 投放节奏</div>
+            <p class="hl-author__bio">
+              十年线下活动执行经验，管过商场物料也管过社区海报墙。她最常说的是
+              「先看人流，再谈转化」。在平台负责投放攻略系列，
+              会把每一次点位的选择理由、印刷成本、回收周期写成可复核的账本，
+              让投放这件事从经验变成可以复用的方法。
+            </p>
+            <div class="hl-author__nums"><span>作品 <b>54</b></span><span>粉丝 <b>7.8 万</b></span></div>
+            <button class="hl-linkbtn" data-hl-author="林向阳">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="hl-author">
+          <div class="hl-avatar">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#e8edf3"/><path d="M14 46l12-20 9 13 7-9 8 16z" fill="#1a1c22"/><circle cx="44" cy="18" r="6" fill="#b3202f"/></svg>
+          </div>
+          <div>
+            <h3 class="hl-author__name">苏慢 <span class="hl-tag hl-tag--ink">数据观察</span></h3>
+            <div class="hl-author__field">擅长：数据口径 · 行业观察</div>
+            <p class="hl-author__bio">
+              数据分析师出身，转型做内容创作者。她的视频里图表多过镜头，
+              常把「统计口径不同，结论会完全相反」挂在嘴边。
+              在平台负责行业观察与数据解读，擅长把一份枯燥的后台报表讲成一条有起伏的故事线，
+              也帮不少品牌修正过复盘的错误前提。
+            </p>
+            <div class="hl-author__nums"><span>作品 <b>71</b></span><span>粉丝 <b>9.6 万</b></span></div>
+            <button class="hl-linkbtn" data-hl-author="苏慢">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="hl-author">
+          <div class="hl-avatar">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#34242a"/><rect x="14" y="14" width="16" height="16" fill="#e8626f"/><rect x="34" y="14" width="16" height="16" fill="#f2e9dd"/><rect x="14" y="34" width="16" height="16" fill="#f2e9dd"/><rect x="34" y="34" width="16" height="16" fill="#e8626f"/></svg>
+          </div>
+          <div>
+            <h3 class="hl-author__name">陆见微 <span class="hl-tag">创作幕后</span></h3>
+            <div class="hl-author__field">擅长：拍摄幕后 · 内容结构</div>
+            <p class="hl-author__bio">
+              广告导演，拍过商业片也拍过记录短片。他相信一条片子的说服力来自结构而非特效，
+              所以在平台的内容里，你更多看到分镜表和机位图，而不是成品剪辑。
+              主理《扫码之后》专题，负责把品牌故事讲得克制、有细节、不煽情。
+            </p>
+            <div class="hl-author__nums"><span>作品 <b>43</b></span><span>粉丝 <b>6.2 万</b></span></div>
+            <button class="hl-linkbtn" data-hl-author="陆见微">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="hl-author">
+          <div class="hl-avatar">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#f2e9dd"/><circle cx="32" cy="26" r="12" fill="#b3202f"/><path d="M8 62c4-14 12-20 24-20s20 6 24 20z" fill="#1a1c22"/></svg>
+          </div>
+          <div>
+            <h3 class="hl-author__name">何知白 <span class="hl-tag hl-tag--ink">内容合规</span></h3>
+            <div class="hl-author__field">擅长：合规审核 · 实用技巧</div>
+            <p class="hl-author__bio">
+              法律背景，做过三年平台内容审核。他写东西一板一眼，但讲得清楚：
+              哪些链接会被拦截、为什么被拦截、怎么改才能通过。
+              在平台负责合规系列，坚持用具体案例代替抽象条款，
+              也被社区用户称为「最不爱说空话的审核员」。
+            </p>
+            <div class="hl-author__nums"><span>作品 <b>39</b></span><span>粉丝 <b>5.4 万</b></span></div>
+            <button class="hl-linkbtn" data-hl-author="何知白">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="hl-author">
+          <div class="hl-avatar">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#1a1c22"/><path d="M16 44V22l16 10z" fill="#e8626f"/><rect x="34" y="20" width="6" height="24" rx="3" fill="#f2e9dd"/><rect x="44" y="26" width="6" height="18" rx="3" fill="#f2e9dd"/></svg>
+          </div>
+          <div>
+            <h3 class="hl-author__name">品牌编辑部 <span class="hl-tag">官方发布</span></h3>
+            <div class="hl-author__field">擅长：企业动态 · 品牌故事</div>
+            <p class="hl-author__bio">
+              平台官方内容团队，负责企业动态、产品更新与品牌故事的官方发布。
+              不追热点，也不写口号，只把版本变化、规则调整、活动安排讲明白。
+              所有更新都会标注日期与适用范围，方便用户随时回查历史记录。
+            </p>
+            <div class="hl-author__nums"><span>作品 <b>118</b></span><span>粉丝 <b>3.1 万</b></span></div>
+            <button class="hl-linkbtn" data-hl-author="品牌编辑部">查看作者档案</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 口碑评价（双列短评 + 评分摘要） ===== -->
+  <section class="hl-section hl-section--tight" id="hl-voices" aria-labelledby="hl-voices-h2">
+    <div class="hl-wrap">
+      <span class="hl-eyebrow">口碑与评价</span>
+      <h2 class="hl-h2" id="hl-voices-h2">来自<em>社区用户</em>的真实反馈</h2>
+      <p class="hl-lead">我们不筛选好评，只隐藏包含个人信息的片段。以下评价来自不同使用场景。</p>
+
+      <div class="hl-score" style="margin-top:24px;">
+        <b>4.8</b>
+        <span>综合口碑评分（满分 5.0）<br>基于近 90 天 2,146 条用户评价统计，样本覆盖创作者、品牌与普通用户。</span>
+      </div>
+
+      <div class="hl-reviews">
+        <article class="hl-review">
+          <div class="hl-review__top"><span class="hl-review__avatar">周</span><div><div class="hl-review__who">周女士 · 独立书店店主</div><div class="hl-review__meta">使用 2 年 · 线下活动报名</div></div></div>
+          <p>最直接的好处是物料不用重印。读书会的场次改期，我只需要在后台改落地页，门口那张已经贴了半年的码照样能用。这点真的省了很多事。</p>
+          <div class="hl-review__stars">★★★★★</div>
+        </article>
+
+        <article class="hl-review">
+          <div class="hl-review__top"><span class="hl-review__avatar">阿</span><div><div class="hl-review__who">阿泽 · 校园摄影社</div><div class="hl-review__meta">使用 8 个月 · 作品展入口</div></div></div>
+          <p>后台的访问数据比我想的细，能看到不同点位的扫码量差异。我们靠这个把展板位置调了一次，扫码量大概翻了一倍。</p>
+          <div class="hl-review__stars">★★★★★</div>
+        </article>
+
+        <article class="hl-review">
+          <div class="hl-review__top"><span class="hl-review__avatar">李</span><div><div class="hl-review__who">李先生 · 小家电品牌市场</div><div class="hl-review__meta">使用 3 年 · 产品说明页</div></div></div>
+          <p>功能是够用的，唯一希望改进的是批量导出的时候可以自定义字段顺序，现在每次都要再整理一遍。不过客服响应挺快，提了建议有回音。</p>
+          <div class="hl-review__stars">★★★★☆</div>
+        </article>
+
+        <article class="hl-review">
+          <div class="hl-review__top"><span class="hl-review__avatar">k</span><div><div class="hl-review__who">kiki · 社区用户</div><div class="hl-review__meta">使用 1 年 · 内容浏览</div></div></div>
+          <p>我主要是来看测评和攻略的，内容写得比较干，不注水。有一篇讲统计口径的文章帮我避了个坑，当时差点按错误的数据做了结论。</p>
+          <div class="hl-review__stars">★★★★★</div>
+        </article>
+
+        <article class="hl-review">
+          <div class="hl-review__top"><span class="hl-review__avatar">陈</span><div><div class="hl-review__who">陈同学 · 内容创作者</div><div class="hl-review__meta">使用 6 个月 · 投稿</div></div></div>
+          <p>说说不足：投稿审核时间有时候要等两天，赶上活动截止会比较着急。另外希望移动端后台能再简化一点，手机上操作表单有点挤。</p>
+          <div class="hl-review__stars">★★★★☆</div>
+        </article>
+
+        <article class="hl-review">
+          <div class="hl-review__top"><span class="hl-review__avatar">赵</span><div><div class="hl-review__who">赵工 · 制造业信息科</div><div class="hl-review__meta">使用 4 年 · 设备说明</div></div></div>
+          <p>我们车间贴了几百张设备说明码，最看重的是稳定性。这几年没有出现过集体失效的情况，变更也有记录可查，这点让人放心。</p>
+          <div class="hl-review__stars">★★★★★</div>
+        </article>
+
+        <article class="hl-review">
+          <div class="hl-review__top"><span class="hl-review__avatar">吴</span><div><div class="hl-review__who">吴老师 · 社区活动组织者</div><div class="hl-review__meta">使用 1 年半 · 报名与问卷</div></div></div>
+          <p>活动报名用这个是最省心的，码贴出去之后不用再管，报名数据自己汇总。要是能直接对接表格导出就更好了。</p>
+          <div class="hl-review__stars">★★★★☆</div>
+        </article>
+
+        <article class="hl-review">
+          <div class="hl-review__top"><span class="hl-review__avatar">方</span><div><div class="hl-review__who">方方 · 手作工作室</div><div class="hl-review__meta">使用 10 个月 · 原料溯源</div></div></div>
+          <p>给每批原料做了溯源码，客人扫一下能看到来源和制作时间。这个功能原本以为很难，实际做下来比想象中简单，客人反馈也蛮好。</p>
+          <div class="hl-review__stars">★★★★★</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 企业动态 + 合作品牌 ===== -->
+  <section class="hl-section hl-section--tight" id="hl-news" aria-labelledby="hl-news-h2">
+    <div class="hl-wrap">
+      <span class="hl-eyebrow">企业动态</span>
+      <h2 class="hl-h2" id="hl-news-h2"><em>官方发布</em>与合作伙伴</h2>
+      <p class="hl-lead">平台的产品更新、规则调整与活动安排，都在这里按时间留档。</p>
+
+      <div class="hl-cols" style="margin-top:26px;">
+        <div>
+          <h3 class="hl-h3" style="margin-bottom:12px;">近期动态</h3>
+          <ul class="hl-news">
+            <li><time datetime="2026-11-22">11-22</time><a href="#hl-focus">跳转二维码批量生成器 v3.2 上线，新增访问统计与自定义落地页参数</a><span class="hl-tag">产品</span></li>
+            <li><time datetime="2026-11-20">11-20</time><a href="#hl-creators">创作者名录扩充 38 位，覆盖合规、数据、线下投放等方向</a><span class="hl-tag">社区</span></li>
+            <li><time datetime="2026-11-18">11-18</time><a href="#hl-topics">《扫码之后》第二季第 6 期开播，记录老街面馆的扫码故事</a><span class="hl-tag">内容</span></li>
+            <li><time datetime="2026-11-15">11-15</time><a href="#hl-faq">《内容安全与链接合规白皮书（2026 版）》开放下载</a><span class="hl-tag">规则</span></li>
+            <li><time datetime="2026-11-12">11-12</time><a href="#hl-submit">冬季创意挑战赛报名开启，投稿截止 12 月 20 日</a><span class="hl-tag">活动</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="hl-h3" style="margin-bottom:12px;">合作品牌与伙伴</h3>
+          <div class="hl-partners">
+            <div class="hl-partner"><i></i>城市书房联盟</div>
+            <div class="hl-partner"><i></i>青禾手作</div>
+            <div class="hl-partner"><i></i>见山影像</div>
+            <div class="hl-partner"><i></i>拾光咖啡</div>
+            <div class="hl-partner"><i></i>南岸设计周</div>
+            <div class="hl-partner"><i></i>本地生活观察</div>
+          </div>
+          <p class="hl-meta" style="margin-top:14px;">
+            合作方向覆盖线下空间、文创品牌与影像机构，合作内容包括联合企划、活动报名落地页与内容互推。
+            平台对合作方执行统一的内容标准。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="hl-section hl-section--tight" id="hl-faq" aria-labelledby="hl-faq-h2">
+    <div class="hl-wrap">
+      <span class="hl-eyebrow">帮助中心</span>
+      <h2 class="hl-h2" id="hl-faq-h2">关于<em>跳转二维码</em>的常见问题</h2>
+      <p class="hl-lead">来自用户提问频率最高的六个问题，答案由平台内容与产品团队共同维护。</p>
+      <div class="hl-faq" style="margin-top:22px;">
+        <details>
+          <summary>跳转二维码可以中途修改落地页吗？</summary>
+          <p>可以。动态码支持在不更换码的前提下修改目标地址，修改记录会在后台留档并显示变更时间。静态码不支持中途修改，需要重新生成并替换物料。平台建议线下物料优先使用动态码，方便后续调整。</p>
+        </details>
+        <details>
+          <summary>平台如何判断一条链接是否合规？</summary>
+          <p>审核分为自动校验与人工复核两层。自动校验覆盖域名信誉、页面结构、诱导行为等基础项；自动校验通过后进入人工抽样复核，重点检查落地页内容是否与描述一致。被拦截的链接会给出具体原因，用户可修正后重新提交。</p>
+        </details>
+        <details>
+          <summary>扫描数据能看到哪些维度？</summary>
+          <p>基础维度包括扫码次数、独立访客、扫码时间分布与来源点位；进阶维度需要在下单时开启，包括停留时长与页面跳转路径。平台不对个人身份信息做采集，统计数据仅用于内容方复盘。</p>
+        </details>
+        <details>
+          <summary>投稿需要满足什么条件？</summary>
+          <p>需要有明确的主题与真实的创作过程。攻略类需要可复现的步骤，测评类需要说明测试方法，幕后类需要提供原创素材证明。图文与视频均可投稿，平台编辑会在收到后安排初审。</p>
+        </details>
+        <details>
+          <summary>一张码可以同时投放到多个点位吗？</summary>
+          <p>可以，并且推荐这样做。建议为每个点位设置独立的参数后缀，这样在后台就能区分不同点位的扫码表现。如果不设参数，所有数据会合并统计，无法分点位复盘。</p>
+        </details>
+        <details>
+          <summary>遇到异常跳转页面应该怎么办？</summary>
+          <p>请通过页面右下角或页脚的反馈入口提交线索，并提供扫码时间与大致位置。平台会在 24 小时内核查，确认异常的链接会被立即下线并记录处理结果。这也是平台持续运营中最重要的用户协作环节。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 投稿 CTA ===== -->
+  <section class="hl-section hl-section--tight" id="hl-submit" aria-labelledby="hl-submit-h2">
+    <div class="hl-wrap">
+      <div class="hl-cta">
+        <div>
+          <span class="hl-eyebrow" style="color:#f0a9b2;">投稿与联系</span>
+          <h2 id="hl-submit-h2">让你的内容，成为别人扫码之后的那一页</h2>
+          <p>
+            冬季创意挑战赛正在报名中，主题是「扫一次，讲一个故事」。我们期待看到攻略、测评与幕后，
+            也欢迎你把使用平台时的真实经验写下来。所有入选作品都会进入精品内容池，
+            并获得平台的官方推荐位与创作者认证。
+          </p>
+        </div>
+        <div class="hl-cta__actions">
+          <button class="hl-btn hl-btn--primary" data-hl-modal="submit">填写投稿信息</button>
+          <button class="hl-btn hl-btn--ghost" style="color:#fff;border-color:rgba(255,255,255,.4)" data-hl-modal="contact">联系我们</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="hl-footer">
+  <div class="hl-wrap">
+    <div class="hl-footer__grid">
+      <div>
+        <div class="hl-footer__brand">黑料社区<em>跳转二维码</em></div>
+        <p>
+          黑料社区跳转二维码官方网站 · 专注二维码跳转链接与内容分发的垂直平台。
+          我们为创作者、企业与社区用户提供高清、正版、专业的链接管理与内容服务，
+          以持续运营与内容安全为底线，构建值得信赖的内容生态。
+        </p>
+        <p style="margin-top:10px;">创作灵感 · 实用攻略 · 企业动态 · 官方发布</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <a href="#hl-focus">焦点内容</a>
+        <a href="#hl-topics">专题企划</a>
+        <a href="#hl-explain">品牌解析</a>
+        <a href="#hl-creators">创作者矩阵</a>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <a href="#hl-news">企业动态</a>
+        <a href="#hl-voices">用户口碑</a>
+        <a href="#hl-faq">帮助中心</a>
+        <a href="#hl-submit">投稿与合作</a>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <a href="#hl-submit">报名挑战赛</a>
+        <a href="#hl-faq">规则说明</a>
+        <a href="#hl-focus">内容攻略</a>
+        <a href="#hl-top">回到顶部</a>
+      </div>
+    </div>
+    <div class="hl-footer__bottom">
+      <span>© 2026 黑料社区跳转二维码 · 官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容安全审核由平台内容团队负责 · 用户至上 · 匠心运营</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== 模态框 ===== -->
+<div class="hl-modal" id="hlModalSubmit" role="dialog" aria-modal="true" aria-labelledby="hlModalSubmitTitle">
+  <div class="hl-modal__box">
+    <h3 id="hlModalSubmitTitle">投稿 / 报名</h3>
+    <p class="hl-meta">请填写基本信息，平台编辑会在三个工作日内通过站内消息联系你。</p>
+    <label class="hl-field">称呼
+      <input type="text" placeholder="例如：程野" data-hl-required>
+    </label>
+    <label class="hl-field">作品方向
+      <select data-hl-required>
+        <option value="">请选择</option>
+        <option>攻略 / 教程</option>
+        <option>工具测评</option>
+        <option>创作幕后</option>
+        <option>品牌故事</option>
+        <option>行业观察</option>
+      </select>
+    </label>
+    <label class="hl-field">内容简介
+      <textarea rows="3" placeholder="用一两句话说明你的内容讲什么、有什么细节" data-hl-required></textarea>
+    </label>
+    <div class="hl-modal__foot">
+      <button class="hl-btn hl-btn--ghost hl-btn--sm" data-hl-close>取消</button>
+      <button class="hl-btn hl-btn--primary hl-btn--sm" data-hl-submitform>提交</button>
+    </div>
+  </div>
+</div>
+
+<div class="hl-modal" id="hlModalContact" role="dialog" aria-modal="true" aria-labelledby="hlModalContactTitle">
+  <div class="hl-modal__box">
+    <h3 id="hlModalContactTitle">联系我们</h3>
+    <p class="hl-meta">平台合作、内容授权、异常链接反馈，都可通过以下方式联系我们。</p>
+    <label class="hl-field">你的称呼
+      <input type="text" placeholder="如何称呼你">
+    </label>
+    <label class="hl-field">联系方式
+      <input type="text" placeholder="邮箱或手机号，仅用于回复">
+    </label>
+    <label class="hl-field">想说的话
+      <textarea rows="3" placeholder="请简述你的需求或问题"></textarea>
+    </label>
+    <div class="hl-modal__foot">
+      <button class="hl-btn hl-btn--ghost hl-btn--sm" data-hl-close>取消</button>
+      <button class="hl-btn hl-btn--primary hl-btn--sm" data-hl-submitform>发送</button>
+    </div>
+  </div>
+</div>
+
+<div class="hl-modal" id="hlModalShare" role="dialog" aria-modal="true" aria-labelledby="hlModalShareTitle">
+  <div class="hl-modal__box">
+    <h3 id="hlModalShareTitle">分享这条内容</h3>
+    <p class="hl-sharetip">选择你常用的渠道，或直接复制页面链接发送给朋友。</p>
+    <div class="hl-share-grid">
+      <button data-hl-shareto="微信">微信</button>
+      <button data-hl-shareto="微博">微博</button>
+      <button data-hl-shareto="QQ">QQ</button>
+      <button data-hl-shareto="朋友圈">朋友圈</button>
+      <button data-hl-shareto="邮件">邮件</button>
+      <button data-hl-copy>复制链接</button>
+    </div>
+    <div class="hl-modal__foot">
+      <button class="hl-btn hl-btn--ghost hl-btn--sm" data-hl-close>关闭</button>
+    </div>
+  </div>
+</div>
+
+<div class="hl-modal" id="hlModalAuthor" role="dialog" aria-modal="true" aria-labelledby="hlModalAuthorTitle">
+  <div class="hl-modal__box">
+    <h3 id="hlModalAuthorTitle">作者档案</h3>
+    <p class="hl-meta" id="hlModalAuthorMeta">平台签约创作者</p>
+    <p id="hlModalAuthorBody" style="font-size:14px;color:#3d4048;"></p>
+    <div class="hl-modal__foot">
+      <button class="hl-btn hl-btn--ghost hl-btn--sm" data-hl-close>关闭</button>
+      <button class="hl-btn hl-btn--primary hl-btn--sm" data-hl-follow>关注作者</button>
+    </div>
+  </div>
+</div>
+
+<div class="hl-toast" id="hlToast" role="status" aria-live="polite"></div>
+<button class="hl-totop" id="hlToTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Toast ---------- */
+  var toastEl = document.getElementById('hlToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById('hlBurger');
+  var mobileNav = document.getElementById('hlMobileNav');
+  if(burger && mobileNav){
+    burger.addEventListener('click', function(){
+      var open = mobileNav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        mobileNav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = document.getElementById('hlSearchInput');
+  var searchBtn = document.getElementById('hlSearchBtn');
+  var feedback = document.getElementById('hlSearchFeedback');
+  function doSearch(){
+    var q = (searchInput.value || '').trim();
+    if(!q){
+      feedback.textContent = '请输入关键词，例如「跳转」「测评」「合规」。';
+      return;
+    }
+    feedback.textContent = '正在为你筛选「' + q + '」相关的内容：焦点推荐、专题企划与作者矩阵已按相关度重新排序。';
+    toast('已按「' + q + '」筛选内容');
+    var focus = document.getElementById('hl-focus');
+    if(focus) focus.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  if(searchBtn) searchBtn.addEventListener('click', doSearch);
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+    });
+  }
+
+  /* ---------- 标签筛选 ---------- */
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.hl-chip'));
+  var filterFeedback = document.getElementById('hlFilterFeedback');
+  function applyFilter(tag){
+    var items = Array.prototype.slice.call(document.querySelectorAll('#hlFocusList .hl-vitem, .hl-feature, .hl-topic'));
+    var shown = 0;
+    items.forEach(function(el){
+      var t = el.getAttribute('data-hl-tag') || '';
+      var ok = (tag === '全部') || (t.indexOf(tag) !== -1);
+      el.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    filterFeedback.textContent = tag === '全部'
+      ? '已显示全部内容条目。'
+      : '已筛选「' + tag + '」相关内容，共 ' + shown + ' 项。';
+  }
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(x){ x.classList.remove('is-active'); });
+      c.classList.add('is-active');
+      applyFilter(c.getAttribute('data-hl-tag'));
+    });
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-hl-like]');
+    if(likeBtn){
+      e.preventDefault();
+      var on = likeBtn.classList.toggle('is-on');
+      var numEl = likeBtn.querySelector('b');
+      var base = numEl ? parseInt(numEl.textContent, 10) || 0 : null;
+      if(numEl){
+        numEl.textContent = on ? base + 1 : Math.max(base - 1, 0);
+      }
+      toast(on ? '已点赞，感谢你的支持' : '已取消点赞');
+      return;
+    }
+    var favBtn = e.target.closest('[data-hl-fav]');
+    if(favBtn){
+      e.preventDefault();
+      var onF = favBtn.classList.toggle('is-on');
+      var txt = favBtn.textContent.replace(/(☆|★|收藏|已收藏)/g,'').trim();
+      favBtn.innerHTML = onF ? '★ 已收藏' : '☆ 收藏' + (txt ? ' ' + txt : '');
+      toast(onF ? '已加入收藏，可在个人中心查看' : '已取消收藏');
+      return;
+    }
+  });
+
+  /* ---------- 复制链接 ---------- */
+  function copyLink(){
+    var link = location.href.split('#')[0];
+    function done(){ toast('链接已复制，可粘贴分享'); }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(link).then(done).catch(fallback);
+    } else { fallback(); }
+    function fallback(){
+      try{
+        var ta = document.createElement('textarea');
+        ta.value = link;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        done();
+      }catch(err){
+        toast('复制失败，请手动选择链接复制');
+      }
+    }
+  }
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-hl-copy]')){
+      e.preventDefault();
+      copyLink();
+      closeAllModals();
+    }
+  });
+
+  /* ---------- 分享 ---------- */
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-hl-share]')){
+      e.preventDefault();
+      openModal('hlModalShare');
+    }
+    var to = e.target.closest('[data-hl-shareto]');
+    if(to){
+      toast('已打开「' + to.getAttribute('data-hl-shareto') + '」分享面板');
+      closeAllModals();
+    }
+  });
+
+  /* ---------- 模态框控制 ---------- */
+  var modals = [
+    document.getElementById('hlModalSubmit'),
+    document.getElementById('hlModalContact'),
+    document.getElementById('hlModalShare'),
+    document.getElementById('hlModalAuthor')
+  ].filter(Boolean);
+
+  function openModal(id){
+    closeAllModals();
+    var m = document.getElementById(id);
+    if(m){ m.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
+  }
+  function closeAllModals(){
+    modals.forEach(function(m){ m.classList.remove('is-open'); });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', function(e){
+    var trigger = e.target.closest('[data-hl-modal]');
+    if(trigger){
+      var map = {submit:'hlModalSubmit', contact:'hlModalContact'};
+      var id = map[trigger.getAttribute('data-hl-modal')];
+      if(id) openModal(id);
+      return;
+    }
+    if(e.target.closest('[data-hl-close]')){
+      closeAllModals();
+      return;
+    }
+    if(e.target.classList.contains('hl-modal')){ closeAllModals(); }
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeAllModals();
+  });
+
+  /* ---------- 表单提交 ---------- */
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-hl-submitform]')){
+      var box = e.target.closest('.hl-modal__box');
+      var required = box ? box.querySelectorAll('[data-hl-required]') : [];
+      var ok = true;
+      Array.prototype.forEach.call(required, function(f){
+        if(!f.value.trim()){ ok = false; f.style.borderColor = '#b3202f'; }
+        else { f.style.borderColor = ''; }
+      });
+      if(!ok){ toast('请先补全必填信息'); return; }
+      toast('提交成功，平台编辑会尽快联系你');
+      closeAllModals();
+    }
+  });
+
+  /* ---------- 作者档案 ---------- */
+  var authorInfo = {
+    '程野': '平台资深创作者，主理跳转配置拆解与工具横向测评两个系列，累计发布评测内容 86 篇。习惯以对比表和操作截图完成表达，是社区里被引用次数最多的作者之一。',
+    '林向阳': '线下投放方向创作者，十年活动执行经验。负责平台投放攻略系列，内容以点位选择、物料成本与回收周期为主线，强调可复核的操作方法。',
+    '苏慢': '数据分析师转型创作者，负责行业观察与数据解读。擅长拆解统计口径对结论的影响，作品以图表与复盘笔记见长。',
+    '陆见微': '广告导演，主理《扫码之后》专题。内容聚焦拍摄幕后与品牌故事，强调结构、克制与细节，拒绝煽情式表达。',
+    '何知白': '法律背景，负责内容合规系列。坚持用具体案例解释审核规则，帮助用户理解拦截原因与修改路径。',
+    '品牌编辑部': '平台官方内容团队，负责企业动态、产品更新与品牌故事的官方发布，所有内容标注日期与适用范围。'
+  };
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-hl-author]');
+    if(!btn) return;
+    var name = btn.getAttribute('data-hl-author');
+    document.getElementById('hlModalAuthorTitle').textContent = name + ' · 作者档案';
+    document.getElementById('hlModalAuthorMeta').textContent = '黑料社区跳转二维码 · 签约创作者';
+    document.getElementById('hlModalAuthorBody').textContent = authorInfo[name] || '该作者暂无详细档案。';
+    openModal('hlModalAuthor');
+  });
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-hl-follow]')){
+      toast('已关注作者，后续更新会提醒你');
+      closeAllModals();
+    }
+  });
+
+  /* ---------- 数字滚动 ---------- */
+  var counters = Array.prototype.slice.call(document.querySelectorAll('[data-hl-count]'));
+  var counted = false;
+  function runCount(){
+    if(counted) return;
+    counted = true;
+    counters.forEach(function(el){
+      var target = parseFloat(el.getAttribute('data-hl-count')) || 0;
+      var suffix = el.querySelector('small');
+      var suffixHTML = suffix ? suffix.outerHTML : '';
+      var start = null;
+      var dur = 1100;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var val = Math.floor(target * (1 - Math.pow(1 - p, 3)));
+        el.innerHTML = val + suffixHTML;
+        if(p < 1) requestAnimationFrame(step);
+        else el.innerHTML = target + suffixHTML;
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window && counters.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ runCount(); io.disconnect(); }
+      });
+    }, {threshold:.4});
+    io.observe(counters[0]);
+  } else { runCount(); }
+
+  /* ---------- 回到顶部 ---------- */
+  var toTop = document.getElementById('hlToTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 560){ toTop.classList.add('is-show'); }
+    else { toTop.classList.remove('is-show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
